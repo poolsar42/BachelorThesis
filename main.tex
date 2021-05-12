@@ -319,8 +319,10 @@
     \item Python 3.8.5 - среда для запуска скриптов формата *.py \cite{python}
     
     \item Jupyter Notebook -веб-приложение с открытым исходным кодом, которое позволяет создавать и обмениваться
-    документами, содержащими живой код, уравнения, визуализации и повествовательный текст. Использование включает в себя:
-    очистку и преобразование данных, численное моделирование, статистическое моделирование, визуализацию данных, машинное
+    документами, содержащими живой код, уравнения, визуализации и повествовательный текст. Использование включает в 
+    себя:
+    очистку и преобразование данных, численное моделирование, статистическое моделирование, визуализацию данных, 
+    машинное
     обучение и многое другое. \cite{jupyter}
     
     \item Скрипты отсюда \(https://github.com/poolsar42/phages-and-hosts\) - подумать, что про них написать!
@@ -379,7 +381,8 @@
 \par{Далее мы выгрузили все геномы хостов с базы данных RefSeq NCBI. Когда у нас были геномы фагов и их хостов, нам было
 нужно получить с этих геномов гены. Гены мы находили с помощью Gene-Marks 2. Что хорошо, Gene-Marks 2 также дал позицию
 каждого гена в геноме. Каждому гену посчитали его транслирующийся белок, также с помощью Gene-Marks 2. После этого для
-каждого гена нашли вышестоящие регуляторные области, длиной в 50 нуклеотидов, которые нужны для посадки РНК-полимераз(?).
+каждого гена нашли вышестоящие регуляторные области, длиной в 50 нуклеотидов, которые нужны для посадки 
+РНК-полимераз(?).
 Наша гипотеза как раз заключается в том, что эти вышестоящие области у фага и его хозяина для некоторых генов будут
 совпадать по некоторым мотивам.}
 
@@ -390,7 +393,8 @@
 \par{Далее проверку на совпадения вышестоящих областей мы засунули все вышестоящие области хоста и его фагов в программу
 MEME Suite. Как и ожидалось, мы получили множество профилей, которые были общими у фагов и их хоста. }
 
-\par{Также MEME-Suite для каждого профиля мотива дала нам PFM (Position Frequency Matrix), поэтому у нас была возможность
+\par{Также MEME-Suite для каждого профиля мотива дала нам PFM (Position Frequency Matrix), поэтому у нас была 
+возможность
 сравнить сами мотивы между собой. У нас появилась гипотеза, что мотивы фагов, атакующих одного хоста, могут быть также
 схожи и как-то ировать между собой. Мы решили посмотреть корреляцию 2D массивов - потому что для каждой позиции в
 матрице частот у нас было 4 значения - на 4 возможных нуклеотида.}
@@ -408,7 +412,9 @@ MEME Suite. Как и ожидалось, мы получили множеств
     мотивов, активных сайтов и т.д. в биологических последовательностях. (Reference: Thomsen, M.C., \& Nielsen, M.
     2012. Nucleic Acids Res. 40(Web Server issue):W281-287).
    
-    \item Матрица частот нуклеотидов - считается путем подсчета вхождений каждого нуклеотида в каждой позиции. Один мотив встречается в последовательностях несколько раз и с наперёд заданной точностью мы считаем, что это подходящий для нас мотив.
+    \item Матрица частот нуклеотидов - считается путем подсчета вхождений каждого нуклеотида в каждой позиции. Один 
+    мотив встречается в последовательностях несколько раз и с наперёд заданной точностью мы считаем, что это подходящий 
+    для нас мотив.
     
     \item PSSM (Position-Specific Scoring Matrices) - The position-specific scoring matrix corresponding to the motif
     is printed for use by database search programs such as MAST. This matrix is a log-odds matrix calculated by taking
@@ -422,7 +428,9 @@ MEME Suite. Как и ожидалось, мы получили множеств
     width of the motif, number of characters in the training set, the scoring threshold (obsolete) and the motif
     E-value. \cite{memeres} 
     
-    \item host\_phage\_results\_total.tsv - таблица, в которой содержатся данные о мотивах: последовательность, длина, число сайтов, ic, llr, e\_value, название файла с PSSM, название файла с PFM, регулярное выражения для мотива и причина остановки.
+    \item host\_phage\_results\_total.tsv - таблица, в которой содержатся данные о мотивах: последовательность, длина, 
+    число сайтов, ic, llr, e\_value, название файла с PSSM, название файла с PFM, регулярное выражения для мотива и 
+    причина остановки.
 \end{itemize}
 
 
@@ -445,20 +453,40 @@ MEME Suite. Как и ожидалось, мы получили множеств
     фага, либо "PHAGE", если мотив был найден только и фага или "HOST", если мотив был найден только у бактерии. К
     нашему удивлению некоторые мотивы не были найдены нигде - для таких мы в этой колонке выписали "NOT FOUND".}
     
-    \par{Нам также стало интересно, коррелируют ли как-то между собой мотивы бактериофагов, которые атакуют одну бактерию, а также есть ли корреляция между мотивами бакториофагов из одной таксономической категории. Для начала мы хотели посчитать корреляцию Пирсона между PFM этих мотивов. Но PFM - двумерный массив, мы не обнаружили в известных библиотеках Python подходящей функции для подсчётка корреляции между 2D-массивами. Мы написали собственный скрипт для предварительного подсчёта такой корреляции $preliminary_correlation.py$, используя трюки отсюда \cite{stackoverflow}. Результаты на данном этапе трудно интерпретировать, но можно заметить, что данные и вправду как-то коррелируют.}
+    \par{Нам также стало интересно, коррелируют ли как-то между собой мотивы бактериофагов, которые атакуют одну 
+    бактерию, а также есть ли корреляция между мотивами бакториофагов из одной таксономической категории. Для начала мы 
+    хотели посчитать корреляцию Пирсона между PFM этих мотивов. Но PFM - двумерный массив, мы не обнаружили в известных 
+    библиотеках Python подходящей функции для подсчётка корреляции между 2D-массивами. Мы написали собственный скрипт 
+    для предварительного подсчёта такой корреляции $preliminary_correlation.py$, используя трюки отсюда 
+    \cite{stackoverflow}. Результаты на данном этапе трудно интерпретировать, но можно заметить, что данные и вправду 
+    как-то коррелируют.}
     
-    \par{Также, как я уже написал выше, мы удивлись, когда обнаружили, что некоторые мотивы не были найдены ни в каком из представленных вышестоящих регуляторных регионах. Но мы искали сами мотивы внутри них. Также во многих мотивах можно заметить большое количество букв W, N, Y и ещё некоторых, которые не входят в состав привычных нам A,T,G и C для нуклеотидов. Дело в том, что на одном месте в мотиве в разных последовательностях могут стоять разные нуклеотиды. И для таких двойственных мест MEME-Suite использует специальный алфавит, в котором одна буква заменяет все возможные основания на данной позиции \cite{memealphabet}. }
+    \par{Также, как я уже написал выше, мы удивлись, когда обнаружили, что некоторые мотивы не были найдены ни в каком 
+    из представленных вышестоящих регуляторных регионах. Но мы искали сами мотивы внутри них. Также во многих мотивах 
+    можно заметить большое количество букв W, N, Y и ещё некоторых, которые не входят в состав привычных нам A,T,G и C 
+    для нуклеотидов. Дело в том, что на одном месте в мотиве в разных последовательностях могут стоять разные 
+    нуклеотиды. И для таких двойственных мест MEME-Suite использует специальный алфавит, в котором одна буква заменяет 
+    все возможные основания на данной позиции \cite{memealphabet}. }
     
-    \par{Но когда мы начали анализировать эти последовательности, мы заметили, что некоторые регулярные выражения и двойственные буквы, которые должны им соответствовать, не совпадают с тем, что дано в алфавите \cite{memealphabet}. Мы решили протестировать нашу выборку в ещё одно программе по поиску собственных мотивов. К сожаления, пока что мы не нашли подходящей программы.
+    \par{Но когда мы начали анализировать эти последовательности, мы заметили, что некоторые регулярные выражения и 
+    двойственные буквы, которые должны им соответствовать, не совпадают с тем, что дано в алфавите \cite{memealphabet}. 
+    Мы решили протестировать нашу выборку в ещё одно программе по поиску собственных мотивов. К сожаления, пока что мы 
+    не нашли подходящей программы.
     \begin{itemize}
-        \item sarus-2.0.2 ищет только известный мотив в нескольких последовательностях (а нам нужно в них самих находить новые). 
-        \item Weeder подходит под наши критерии, но он ищет только мотивы длиной 6, 8 и 10 нуклеотидов - для нас это маловато. мы же искали мотивы длиной от 10 до 50 нуклеотидов.
-        \item Phyloscan, motifmatchr и много других пакетов для R всё ещё мне недоступны. Я с R впервые познакомился в этом семестре, поэтому я не успел пока к нему приспособиться, чтоби использовать в дипломе какие-то пакеты для R.
-        \item MotifScan и много подобных ему ищут лишь мотивы из известных баз данных. Здесь мы столкнулись с той же проблемой, что и при использовании sarus-2.0.2
+        \item sarus-2.0.2 ищет только известный мотив в нескольких последовательностях (а нам нужно в них самих находить
+        новые). 
+        \item Weeder подходит под наши критерии, но он ищет только мотивы длиной 6, 8 и 10 нуклеотидов - для нас это 
+        маловато. мы же искали мотивы длиной от 10 до 50 нуклеотидов.
+        \item Phyloscan, motifmatchr и много других пакетов для R всё ещё мне недоступны. Я с R впервые познакомился в 
+        этом семестре, поэтому я не успел пока к нему приспособиться, чтоби использовать в дипломе какие-то пакеты для 
+        R.
+        \item MotifScan и много подобных ему ищут лишь мотивы из известных баз данных. Здесь мы столкнулись с той же 
+        проблемой, что и при использовании sarus-2.0.2
     \end{itemize}
     }
     
-    \par{Кратко описал результаты. Видно сейчас, что работа на будущее у нас есть: мы хотим написать свой скрипт для корелляционого анализа 2D массивов и + проверить наши мотивы в другой прогаммы для уверенности. А дальше как пойдёт}
+    \par{Кратко описал результаты. Видно сейчас, что работа на будущее у нас есть: мы хотим написать свой скрипт для 
+    корелляционого анализа 2D массивов и + проверить наши мотивы в другой прогаммы для уверенности. А дальше как пойдёт}
     
 \newpage
 \begin{center}
@@ -468,19 +496,38 @@ MEME Suite. Как и ожидалось, мы получили множеств
 \newpage
 \begin{thebibliography}{9}
     \addcontentsline{toc}{section}{\refname}
-    \bibitem{hinton1} Stitt B, Hinton DM: Regulation of middle-mode transcription.In Molecular biology  of  bacteriophage  T4.Edited by: Karam JD, Drake J, Kreuzer KN, Mosig G, Hall D, Eiserling F, Black L, Spicer E, Kutter E, Carlson K, Miller ES.Washington, D.C.: American Society for Microbiology; 1994:142-160
-    \bibitem{hinton2} Brody E, Rabussay D, Hall D:Regulation of transcription of prereplicative genes. In Bacteriophage  T4.Edited by: Mathews CK, Kutter EM, Mosig G,Berget PB. Washington, D. C.: American Society for Microbiology;1983:174-183
-    \bibitem{hinton3} Hinton DM, Pande S, Wais N, Johnson XB, Vuthoori M, Makela A, Hook-Barnard I: Transcriptional takeover by sigma appropriation: remodelling of the sigma70 subunit of Escherichia coli RNA polymerase by the bacteriophage T4 activator MotA and co-activator AsiA.Microbiology2005,151:1729-1740.
-    \bibitem{hinton4} Miller ES, Kutter E, Mosig G, Arisaka F, Kunisawa T, Ruger W: BacteriophageT4 genome. Microbiol  Mol  Biol  Rev2003,67:86-156
-    \bibitem{hinton5} Wilkens K, Ruger W: Transcription from early promoters. In Molecular Biology  of  Bacteriophage  T4.Edited by: Karam JD, Drake JW, Kreuzer KN,Mosig G, Hall DH, Eiserling FA, Black LW, Spicer EK, Kutter E, Carlson K,Miller ES. Washington, D. C.: American Society for Microbiology;1994:132-141.
-    \bibitem{hinton6} Weisberg R, Hinton DM, Adhya S: Transcriptional Regulation in Bacteriophage. In Encyclopedia  of  Virology.3 edition. Edited by: Mahy BWJ,van Regenmortel MHV. Oxford: Elsevier; 2008:174-186, 174-186.
-    \bibitem{hinton7} Hinton DM: Transcription from a bacteriophage T4 middle promoter using T4 motA protein and phage-modified RNA polymerase.J  BiolChem 1991, 266:18034-18044
-    \bibitem{hinton8} Schmidt RP, Kreuzer KN: Purified MotA protein binds the -30 region of a bacteriophage T4 middle-mode promoter and activates transcription invitro. J  Biol  Chem1992, 267:11399-11407
-    \bibitem{hinton9} Stevens A: New small polypeptides associated with DNA-dependent RNA polymerase of Escherichia coli after infection with bacteriophage T4. Proc  Natl  Acad  Sci  USA1972, 69:603-607.
-    \bibitem{hinton10} Stevens A:An inhibitor of host sigma-stimulated core enzyme activitythat purifies with DNA-dependent RNA polymerase of E. coli followingT4 phage infection.Biochem  Biophys  Res  Commun1973,54:488-493.
-    \bibitem{hinton11} Ouhammouch M, Orsini G, Brody EN: The asiA gene product of bacteriophage T4 is required for middle mode RNA synthesis.J  Bacteriol1994, 176:3956-3965
-    \bibitem{hinton12} Ouhammouch M, Adelman K, Harvey SR, Orsini G, Brody EN: BacteriophageT4 MotA and AsiA proteins suffice to direct Escherichia coli RNA polymerase to initiate transcription at T4 middle promoters. Proc  NatlAcad  Sci  USA1995, 92:1451-1455.
-    \bibitem{hinton13} Hinton DM, March-Amegadzie R, Gerber JS, Sharma M: Bacteriophage T4middle transcription system: T4-modified RNA polymerase; AsiA, a sigma70 binding protein; and transcriptional activator MotA.Methods  Enzymol1996, 274:43-57
+    \bibitem{hinton1} Stitt B, Hinton DM: Regulation of middle-mode transcription.In Molecular biology  of  
+    bacteriophage  T4.Edited by: Karam JD, Drake J, Kreuzer KN, Mosig G, Hall D, Eiserling F, Black L, Spicer E, Kutter 
+    E, Carlson K, Miller ES.Washington, D.C.: American Society for Microbiology; 1994:142-160
+    \bibitem{hinton2} Brody E, Rabussay D, Hall D:Regulation of transcription of prereplicative genes. In Bacteriophage 
+    T4.Edited by: Mathews CK, Kutter EM, Mosig G,Berget PB. Washington, D. C.: American Society for 
+    Microbiology;1983:174-183
+    \bibitem{hinton3} Hinton DM, Pande S, Wais N, Johnson XB, Vuthoori M, Makela A, Hook-Barnard I: Transcriptional 
+    takeover by sigma appropriation: remodelling of the sigma70 subunit of Escherichia coli RNA polymerase by the 
+    bacteriophage T4 activator MotA and co-activator AsiA.Microbiology2005,151:1729-1740.
+    \bibitem{hinton4} Miller ES, Kutter E, Mosig G, Arisaka F, Kunisawa T, Ruger W: BacteriophageT4 genome. Microbiol  
+    Mol  Biol  Rev2003,67:86-156
+    \bibitem{hinton5} Wilkens K, Ruger W: Transcription from early promoters. In Molecular Biology  of  Bacteriophage  
+    T4.Edited by: Karam JD, Drake JW, Kreuzer KN,Mosig G, Hall DH, Eiserling FA, Black LW, Spicer EK, Kutter E, Carlson 
+    K,Miller ES. Washington, D. C.: American Society for Microbiology;1994:132-141.
+    \bibitem{hinton6} Weisberg R, Hinton DM, Adhya S: Transcriptional Regulation in Bacteriophage. In Encyclopedia  of  
+    Virology.3 edition. Edited by: Mahy BWJ,van Regenmortel MHV. Oxford: Elsevier; 2008:174-186, 174-186.
+    \bibitem{hinton7} Hinton DM: Transcription from a bacteriophage T4 middle promoter using T4 motA protein and 
+    phage-modified RNA polymerase.J  BiolChem 1991, 266:18034-18044
+    \bibitem{hinton8} Schmidt RP, Kreuzer KN: Purified MotA protein binds the -30 region of a bacteriophage T4 
+    middle-mode promoter and activates transcription invitro. J  Biol  Chem1992, 267:11399-11407
+    \bibitem{hinton9} Stevens A: New small polypeptides associated with DNA-dependent RNA polymerase of Escherichia coli
+    after infection with bacteriophage T4. Proc  Natl  Acad  Sci  USA1972, 69:603-607.
+    \bibitem{hinton10} Stevens A:An inhibitor of host sigma-stimulated core enzyme activitythat purifies with 
+    DNA-dependent RNA polymerase of E. coli followingT4 phage infection.Biochem  Biophys  Res  Commun1973,54:488-493.
+    \bibitem{hinton11} Ouhammouch M, Orsini G, Brody EN: The asiA gene product of bacteriophage T4 is required for 
+    middle mode RNA synthesis.J  Bacteriol1994, 176:3956-3965
+    \bibitem{hinton12} Ouhammouch M, Adelman K, Harvey SR, Orsini G, Brody EN: BacteriophageT4 MotA and AsiA proteins 
+    suffice to direct Escherichia coli RNA polymerase to initiate transcription at T4 middle promoters. Proc  NatlAcad  
+    Sci  USA1995, 92:1451-1455.
+    \bibitem{hinton13} Hinton DM, March-Amegadzie R, Gerber JS, Sharma M: Bacteriophage T4middle transcription system: 
+    T4-modified RNA polymerase; AsiA, a sigma70 binding protein; and transcriptional activator MotA.Methods  
+    Enzymol1996, 274:43-57
     \bibitem{virus-host} https://www.genome.jp/virushostdb/ 
     \bibitem{biopython} https://biopython.org/
     \bibitem{python} https://docs.python.org/3/
@@ -508,7 +555,8 @@ MEME Suite. Как и ожидалось, мы получили множеств
     \bibitem{-10} https://www.cell.com/cell/fulltext/S0092-8674(11)01339-0
     \bibitem{-35-10wiki} https://en.wikipedia.org/wiki/Promoter\_(genetics)\#Bacterial
     \bibitem{re} https://docs.python.org/3/library/re.html\#module-re
-    \bibitem{stackoverflow} https://stackoverflow.com/questions/30143417/computing-the-correlation-coefficient-between-two-multi-dimensional-arrays
+    \bibitem{stackoverflow} https://stackoverflow.com/questions/30143417/computing-the-correlation-coefficient-between-t
+    wo-multi-dimensional-arrays
     \bibitem{memealphabet} https://meme-suite.org/meme/doc/alphabet-format.html\#standard\_DNA
 \end{thebibliography}
 
