@@ -126,21 +126,6 @@
     Inoviridae усложняют биопленки, участвующие в пневмонии и муковисцидозе, и защищают бактерии от лекарств,
     предназначенных для искоренения болезни, тем самым способствуя персистирующей инфекции[9].]}
     
-\begin{center}
-   \item \subsection{Bacteriophage genomics \cite{genomics}}
-\end{center}
-
-    
-\begin{center}
-   \item \subsection{Statistical structure of host–phage interactions \cite{structure}}
-\end{center}
-    
-
-   
-\begin{center}
-   \item \subsection{Phage–bacteria infection networks \cite{networks}}
-\end{center}
-
     
 \newpage
 \begin{center}
@@ -222,17 +207,6 @@
         промоторы \cite{hinton}. Действительно, большинство ранних промоторов Т4 очень хорошо конкурируют с промоторами 
         хозяина за доступный RNAP [39].}
         
-        \begin{center}
-            \item {\Large Продолжение ранних стратегий доминирования Т4}
-            \par{Здесь в основном про синтез белков - подумать потом, надо ли это включать}
-        \end{center}
-        
-        \begin{center}
-            \item {\Large Транскрипция средних генов путем расширения ранних транскриптов}
-            \par{Надо ли это вообще включать?}
-        \end{center}
-        
-        
 \begin{center}
     \item \subsection{Energy limitation of cyanophage development: implications formarine carbon cycling (Обработанная)}
 \end{center}
@@ -291,7 +265,7 @@
     мотивы, необходимые для скоординированной экспрессии psbA на начальной и поздней стадиях инфекции.}
     
     \begin{center}
-        \item \subsection{GeneMarkS-2}
+        \item \subsection{GeneMarkS-2 (Обработанный)}
     \end{center}
     
     \par{Для поиска прокариотических генов существует несколько инструментов (например GeneMarkS, Glimmer3, Prodigal), 
@@ -349,10 +323,27 @@
     наибольшее количество правильных прогнозов среди четырех искателей генов. \cite{lomsad}}
     
     \begin{center}
-        \item \subsection{The MEME-Suite}
+        \item \subsection{The MEME-Suite (Обработанный)}
     \end{center}
-
-
+    
+     
+    \par{\textit{Этот абзац можно добавить в введение.} Мотив последовательности ДНК, РНК или белка - это короткий 
+    паттерн, который сохраняется во время эволюции. Мотивом в ДНК может может быть сайт связывания белка; в белках мотив
+    может быть активным сайтом фермента или структурной единицей, необходимой для правильного сворачивания белка. Мотивы
+    в последовательностях являются одними из основных функциональных единиц молекулярной эволюции.}
+    
+    \par{The MEME-Suite - это программируемый набор инструментов, которые анализируют мотивы последовательностей. Ядром набора является алгоритм обнаружения мотивов \texttt{MEME}, который находит мотивы в невыравненных последовательностях ДНК, РНК или белков [1]. Поисковик мотивов ищет \textit{новые} мотивы в предоставленных последовательностях. Существует много инструментов, предназначенных для поиска мотивов только в ДНК; The MEME-Suite может искать мотивы и сканирование последовательностей ДНК, РНК и белков. \cite{bailey}}
+    
+    \par{Как было описано выше, алгоритм \texttt{MEME}, обнаруживает один или несколько мотивов в наборе последовательностей ДНК, РНК или белков, используя метод максимизации математического ожидания для подгонки двухкомпонентной конечной модели к набору последовательностей. Путём подгонки модели к данным обнаруживается единичный мотив, дальше модель стирает вхождения максимально вероятного мотива, найденного таким образом и процесс повторяется. Таким образом ищется множество мотивов. У алгоритм два необходимых параметра - минимальная и максимальная ширина искомых мотивов. Он возвращает профиль каждого мотива и порог, которые вместе могут быть использованы в качестве байесовского оптимального классификатора для поиска вхождений мотива в других базах данных. Алгоритм оценивает, сколько раз каждый мотив встречается в каждой последовательности в наборе данных, и выводит частоту встречаемости этого мотива. \cite{meme}}
+    
+    \begin{figure}[]
+            \centering
+            \includegraphics[width=\textwidth]{img/meme.jpg}
+            \caption{Что умеет делать The MEME-Suite. Нам нужно находить новые мотивы в последовательностях - это указано сверху посередине. \cite{bailey}}
+            \label{fig:skybox}
+    \end{figure}
+    
+    
 \newpage
 \begin{center}
 \item \section{Материалы и Методы} \label{sec:code}
@@ -406,7 +397,7 @@
 \end{itemize}
 
 \begin{center}
-\     item \subsection{Получение общих мотивов}
+      \item \subsection{Получение общих мотивов}
       \item  \subsubsection{Протокол выгрузки геномов}
 \end{center}
     \begin{itemize}
@@ -548,7 +539,7 @@ MEME Suite. Как и ожидалось, мы получили множеств
     }
     
     \par{Кратко описал результаты. Видно сейчас, что работа на будущее у нас есть: мы хотим написать свой скрипт для 
-    корелляционого анализа 2D массивов и + проверить наши мотивы в другой прогаммы для уверенности. А дальше как пойдёт}
+    корелляционого анализа 2D массивов и + проверить наши мотивы в другой прогаммы для уверенности.}
     
 \newpage
 \begin{center}
@@ -558,12 +549,12 @@ MEME Suite. Как и ожидалось, мы получили множеств
 \newpage
 \begin{thebibliography}{9}
     \addcontentsline{toc}{section}{\refname}
-    \bibitem{hinton1} Stitt B, Hinton DM: Regulation of middle-mode transcription.In Molecular biology  of  
+    \bibitem{hinton1} {Stitt B, Hinton DM: Regulation of middle-mode transcription.In Molecular biology  of  
     bacteriophage  T4.Edited by: Karam JD, Drake J, Kreuzer KN, Mosig G, Hall D, Eiserling F, Black L, Spicer E, Kutter 
-    E, Carlson K, Miller ES.Washington, D.C.: American Society for Microbiology; 1994:142-160
-    \bibitem{hinton2} Brody E, Rabussay D, Hall D:Regulation of transcription of prereplicative genes. In Bacteriophage 
+    E, Carlson K, Miller ES.Washington, D.C.: American Society for Microbiology; 1994:142-160}
+    \bibitem{hinton2} {Brody E, Rabussay D, Hall D:Regulation of transcription of prereplicative genes. In Bacteriophage
     T4.Edited by: Mathews CK, Kutter EM, Mosig G,Berget PB. Washington, D. C.: American Society for 
-    Microbiology;1983:174-183
+    Microbiology;1983:174-183}
     \bibitem{hinton3} Hinton DM, Pande S, Wais N, Johnson XB, Vuthoori M, Makela A, Hook-Barnard I: Transcriptional 
     takeover by sigma appropriation: remodelling of the sigma70 subunit of Escherichia coli RNA polymerase by the 
     bacteriophage T4 activator MotA and co-activator AsiA.Microbiology2005,151:1729-1740.
@@ -620,6 +611,7 @@ MEME Suite. Как и ожидалось, мы получили множеств
     \bibitem{stackoverflow} https://stackoverflow.com/questions/30143417/computing-the-correlation-coefficient-between-t
     wo-multi-dimensional-arrays
     \bibitem{memealphabet} https://meme-suite.org/meme/doc/alphabet-format.html\#standard\_DNA
+    \bibitem{meme} https://tlbailey.bitbucket.io/papers/ismb94.pdf
 \end{thebibliography}
 
 \end{document}
