@@ -77,7 +77,7 @@
 \end{center}
 
     \begin{center}
-    \item \subsection{Бактериофаги и их применение}
+    \item \subsection{Бактериофаги}
     \end{center}
     
     \begin{figure}[h]
@@ -109,7 +109,11 @@
 	быть активированы несколько причинами, например повреждением ДНК. Для некоторых бактериофагов хромосомная ДНК 
 	хозяина может быть упакована в частицы бактериофага во время репликации бактериофага вместо генома бактериофага. Это
 	может привести к высокому уровню горизонтального переноса генов в бактериальной популяции.  \cite{phagetreat}}
-
+    
+    \begin{center}
+    \item \subsubsection{Использование бактериофагов}
+    \end{center}
+    
     \par{Использование бактериофагов в качестве высокоспецифичных антимикробных средств широко документировано в 
     литературе. Их даже можно использовать в качестве регулируемого терапевтического средства. \cite{phagemed}}
     
@@ -124,7 +128,23 @@
     стафилококка в крови), в молочной промышленности. У фагов также широко используются в разных биологических 
     исследованиях \cite{phagewikieng}}
     
+    \begin{center}
+    \item \subsubsection{Мотивы}
+    \end{center}
     
+    \par{Мотив последовательности ДНК, РНК или белка - это короткий паттерн, который сохраняется во время эволюции. 
+    Мотивом в ДНК может может быть сайт связывания белка; в белках мотив может быть активным сайтом фермента или 
+    структурной единицей, необходимой для правильного сворачивания белка. Мотивы в последовательностях являются одними 
+    из основных функциональных единиц молекулярной эволюции.}
+    
+    \par{Многие геномы фагов кодируют небольшие белки, которые специфически изменяют РНК-полимеразу (RNAP)
+    бактериального хозяина, ингибируя транскрипцию бактериальной ДНК и способствуя регулируемой транскрипции фаговой 
+    ДНК. \cite{phagetrans}}    
+    
+    \par{Транскрипция бактерии начинается со связывания $\sigma$-фактора с каталитическим ``ядром'' RNAP. Начальный 
+    $\sigma$-фактор, $\sigma^{70}$, специфично связывается с отдельными нуклеотидными последовательностями(мотивами) в 
+    промоторе. Я описываю этот процесс для E.coli детальнее ниже. Фаги развили механизмы, которые модифицируют 
+    $\sigma^{70}$ и перенаправляют бактериальную RNAP для транскрипции генов фага.}
     
 \newpage
 \begin{center}
@@ -140,7 +160,7 @@
 \newpage
 \begin{center}
 \item \section{Обзор литературы} \label{sec:math}
-\item \subsection{Hinton D.M. (Обработанный)}
+\item \subsection{Взаимодействие фага Т4 и E.coli}
 \end{center}
         
         \par{Экспрессия генома Т4 - это строго регулируемый процесс, который начинается сразу после заражения хозяина. 
@@ -157,7 +177,7 @@
         нижестоящие средние гены.}
         
         \begin{center}
-          \item {\Large Механизм начала транскрипции кишечной палочки}
+        \item \subsubsection {Начало транскрипции E.coli}
         \end{center}
         
         \par{E. coli RNAP холофермент, как и все бактериальные RNAP, состоит из ядра субъединиц 
@@ -165,20 +185,20 @@
         специфичности \(\sigma\), который распознает промоторы в ДНК и устанавливается на начальный сайт для 
         транскрипции. Первичный \(\sigma\), \(\sigma^{70}\) в E. coli, используется во время экспоненциального роста; 
         альтернативные факторы \(\sigma\) направляют транскрипцию генов, необходимых в различных условиях роста или во 
-        время стресса [рассмотрено в [17-19]]}
+        время стресса \cite{17,18,19}}
         
         \par{Для начала транскрипции части RNAP должны сначала распознать и связаться с двухцепочечными (ds) элементами 
-        распознавания ДНК, присутствующими в промоторе [reviewed in [20]]. Каждый из C-концевых доменов 
+        распознавания ДНК, присутствующими в промоторе \cite{20}. Каждый из C-концевых доменов 
         $\alpha$-субъединиц ($\alpha$-CTDS) может взаимодействовать с вышестоящим элементом, A/T богатыми 
         последовательностями, присутствующими между позициями -40 и -60. Части \(\sigma^{70}\), присутствующие в RNAP, 
         могут взаимодействовать с тремя различными элементами dsDNA: с элементом -35, с последовательностью -15TGn-13 
         (TGn) и с позициями -12/-11 элемента -10. Как правило, промотор должен содержать только два из трех 
         \(\sigma^{70}\)-зависимых элементов для активности; таким образом, промоторы E. coli могут быть свободно 
         классифицированы как -35/-10 (основной класс), TGn/-10 (также называемый расширенным -10) или -35/TGn 
-        [рассмотрено в [20]].}
+        \cite{20}.}
         
         \begin{center}
-            \item {\Large Ранняя транскрипция Т4}
+            \item \subsubsection{Этапы транскрипции фага Т4}
         \end{center}
         
         \begin{figure}[h]
@@ -186,8 +206,8 @@
                 \includegraphics[width=\textwidth]{img/Hinton.jpg}
             \caption{\textit{Сравнение последовательностей хоста E. coli, раннего Т4 и промежуточного промоторов Т4.}
             Сверху показаны последовательности и положения элементов распознавания промотора хозяина для
-            $\sigma^{70}$-RNAP (UP, -35, TGn, -10)[20, 150]. Ниже аналогичные последовательности, обнаруженные в ранних
-            [4] и промежуточных [91] промоторах T4, сходства выделены черным цветом, а различия-красным. W = A или T; R
+            $\sigma^{70}$-RNAP (UP, -35, TGn, -10)\cite{20,150}. Ниже аналогичные последовательности, обнаруженные в ранних
+            \cite{4} и промежуточных \cite{91} промоторах T4, сходства выделены черным цветом, а различия-красным. W = A или T; R
             = A или G; Y = C или T, n = любой нуклеотид; заглавная буква представляет собой более высоко консервативное
             основание. \cite{hinton}}
             \label{fig:skybox}
@@ -198,31 +218,26 @@
         \(\sigma^{70}\)-ассоциированный RNAP, который активно участвует в транскрипции генома хозяина, на ранние 
         промоторы T4. Такое немедленное перенаправление часто происходит успешно отчасти потому, что большинство ранних 
         промоторов T4 содержат такие же элементы распознавания \(\sigma^{70}\)-RNAP (-35, TGn и -10 элементов) и 
-        элементы \(\alpha\)-CTD UP (списки известных последовательностей ранних промоторов T4 см. в [4,5]). Тем не
+        элементы \(\alpha\)-CTD UP (списки известных последовательностей ранних промоторов T4 в \cite{4, 5}). Тем не
         менее, выравнивание последовательностей ранних промоторов Т4 показало дополнительные области совпадения, и есть 
         предположение, что они содержат и другие последовательности, которые могут оптимизировать взаимодействие RNAP 
         хозяина с элементами промотора T4. Следовательно, в отличие от большинства промоторов хозяина, которые относятся
         к классам -35/-10, TGn/-10 или -35/TGn, ранние промоторы T4 могут быть описаны как ``супер'' UP/-35/TGn/-10 
         промоторы \cite{hinton}. Действительно, большинство ранних промоторов Т4 очень хорошо конкурируют с промоторами 
-        хозяина за доступный RNAP [39].}
+        хозяина за доступный RNAP \cite{39}.}
         
 \begin{center}
-    \item \subsection{Energy limitation of cyanophage development: implications formarine carbon cycling (Обработанная)}
+    \item \subsection{Взаимодействие цианофага и цианобактерии}
 \end{center}
     
     \par{В этой статье авторы инетересовались изменением климата. Изучение этого вопроса требуте детального знания о
     биологической трансформации углерода на Земле. Стало очевидно, что океан - это важный поглотитель
     атмосферного углекислого газа. В плане поглощения $CO_2$ в открытом океане доминируют доминируют два организма: 
-    Prochlorococcus и Synechococcus [2,3,4]. Эти организмы стали моделью для изучения потока углерода из $CO_2$ в 
-    микробную жизнь [5,6]. Однако биологическик потери (антагонистические взаимодействия, выпас скота, вирусный лизис) 
-    прохлорококка и синехокка мало изученны. У вирусов только открывают новые гены, которые действовуют для поддержания 
-    фотосинтеза во время инфекции [7,8], так что, несмотря на окончательную потерю фиксированного углерода в 
-    растворенном органическом веществе в результате лизиса, фиксация $CO_2$ может поддерживаться временно в течение 
-    относительно длительных латентных периодов вируса. Недавно было показано, что на самом деле цианофаг отключает 
-    $CO_2$ инфекцию на ранних стадиях заражения, но при этом поддерживает реакции фотосинтеза [9].}
+    Prochlorococcus и Synechococcus \cite{2_,3_,4_}. Эти организмы стали моделью для изучения потока углерода из $CO_2$ 
+    в микробную жизнь \cite{5_,6_}. Однако биологическик потери (антагонистические взаимодействия, выпас скота, вирусный лизис) прохлорококка и синехокка мало изученны. У вирусов только открывают новые гены, которые действовуют для поддержания фотосинтеза во время инфекции \cite{7_,8_}, так что, несмотря на окончательную потерю фиксированного углерода в растворенном органическом веществе в результате лизиса, фиксация $CO_2$ может поддерживаться временно в течение относительно длительных латентных периодов вируса. Недавно было показано, что на самом деле цианофаг отключает $CO_2$ инфекцию на ранних стадиях заражения, но при этом поддерживает реакции фотосинтеза \cite{9_}.}
     
     \begin{center}
-        \item {\Large Влияние интенсивности света на транскрипцию фага}
+        \item \subsubsection{Влияние интенсивности света на транскрипцию фага}
     \end{center}
 
 
@@ -247,9 +262,9 @@
     ядре центра реакции PSII. Synechococcus также кодируют это белок, но у них не было никаких увеличений в скорости 
     транскрипции. \cite{puxty-evanx}}
     
-    \par{Цианобактерии, включая морской Synechococcus, демонстрируют светозависимую транскрипцию psbAs [18, 23]. В 
+    \par{Цианобактерии, включая морской Synechococcus, демонстрируют светозависимую транскрипцию psbAs \cite{18_,23_}. В
     модельной цианобактерии на светозависимое изменение транскриптов psbA влияют несколько факторов, включая 
-    альтернативные $\sigma$-факторы [24,25,26,27,28]. Более того, продукты деградации D1 непосредственно связываются с 
+    альтернативные $\sigma$-факторы \cite{24_,25_}. Более того, продукты деградации D1 непосредственно связываются с 
     вышележащими регионами последовательностей psbA, так что вызванное светом повреждение может положительно влиять на 
     транскрипцию psbA. Авторы не смогли найти консервативные мотивы в вышележащих областях в последовательностях psbA 
     S-PM2d, которые были бы общими с Synechococcus.} 
@@ -259,13 +274,15 @@
     вышестоящие регуляторные области psbA варьируют в пределах 125-453 пн. Также с высокой степенью достоверности  было 
     обнаружено между рассмотренными фагами 6 общих мотивов в этих последовательностях \cite{puxty-evanx}. Из них два 
     присутствовали в S-PM2d. Эти два мотива - это  -35 (мотив 6) и -10 (мотив 3) (на рисунке) элементы сайтов связывания
-    фактора транскрипции $\sigma^{70}$, типичные для ранних генов Т4-подобных фагов [31]. К тому же, было обнаружено, 
-    что как и у T4, мотив 3 содержит сайт для посадки позднего $\sigma$-фактора Gp55. Таким образом, у S-PM2d имеются 
-    мотивы, необходимые для скоординированной экспрессии psbA на начальной и поздней стадиях инфекции.}
+    фактора транскрипции $\sigma^{70}$, типичные для ранних генов Т4-подобных фагов \cite{31_}. К тому же, было 
+    обнаружено, что как и у T4, мотив 3 содержит сайт для посадки позднего $\sigma$-фактора Gp55. Таким образом, у 
+    S-PM2d имеются мотивы, необходимые для скоординированной экспрессии psbA на начальной и поздней стадиях инфекции.}
     
     \begin{center}
-        \item \subsection{GeneMarkS-2 (Обработанный)}
+        \item \subsection{GeneMarkS-2}
     \end{center}
+    
+   
     
     \par{Для поиска прокариотических генов существует несколько инструментов (например GeneMarkS, Glimmer3, Prodigal), 
     которые известны достаточно высокой точностью в предсказании белок-кодирующих ORF. В среднем эти инструменты 
@@ -293,6 +310,11 @@
     and Tung 1992). GeneMarkS-2 изучает эти паттерны и оценивает параметры типичной модели белок-кодирующих областей, 
     трехпериодической цепи Маркова (Бородовский и др.,1986a, b), итеративно самообученаясь на всем геноме.}
     
+    
+    \par{Алгоритм обучения без учителя выполняет несколько двухэтапных итераций (рис. 4). Каждая итерация приводит к (1)
+    сегментации генома на кодирующие белки (CDS) и некодирующие области (прогнозирование генов) и (2) переоценке 
+    параметров модели}
+    
     \begin{figure}[]
             \centering
             \includegraphics[width=\textwidth]{img/gms2_2.jpg}
@@ -300,9 +322,6 @@
             \label{fig:skybox}
     \end{figure}
     
-    \par{Алгоритм обучения без учителя выполняет несколько двухэтапных итераций (рис. 4). Каждая итерация приводит к (1)
-    сегментации генома на кодирующие белки (CDS) и некодирующие области (прогнозирование генов) и (2) переоценке 
-    параметров модели}
     
     \par{\textit{На первой итерации} Алгоритм Витерби вычисляет максимально вероятную 
     последовательность скрытых состояний (рис. 1) вдоль генома. После первого запуска
@@ -322,20 +341,22 @@
     наибольшее количество правильных прогнозов среди четырех искателей генов. \cite{lomsad}}
     
     \begin{center}
-        \item \subsection{The MEME-Suite (Обработанный)}
+        \item \subsection{The MEME-Suite}
     \end{center}
-    
-     
-    \par{\textit{Этот абзац можно добавить в введение.} Мотив последовательности ДНК, РНК или белка - это короткий 
-    паттерн, который сохраняется во время эволюции. Мотивом в ДНК может может быть сайт связывания белка; в белках мотив
-    может быть активным сайтом фермента или структурной единицей, необходимой для правильного сворачивания белка. Мотивы
-    в последовательностях являются одними из основных функциональных единиц молекулярной эволюции.}
     
     \par{The MEME-Suite - это программируемый набор инструментов, которые анализируют мотивы последовательностей. Ядром 
     набора является алгоритм обнаружения мотивов \texttt{MEME}, который находит мотивы в невыравненных 
-    последовательностях ДНК, РНК или белков [1]. Поисковик мотивов ищет \textit{новые} мотивы в предоставленных 
+    последовательностях ДНК, РНК или белков \cite{_1}. Поисковик мотивов ищет \textit{новые} мотивы в предоставленных 
     последовательностях. Существует много инструментов, предназначенных для поиска мотивов только в ДНК; The MEME-Suite 
     может искать мотивы и сканирование последовательностей ДНК, РНК и белков. \cite{bailey}}
+    
+    \begin{figure}[]
+        \centering
+        \includegraphics[width=\textwidth]{img/meme.jpg}
+        \caption{Что умеет делать The MEME-Suite. Нам нужно находить новые мотивы в последовательностях - это 
+        указано сверху посередине. \cite{bailey}}
+        \label{fig:skybox}
+    \end{figure}
     
     \par{Как было описано выше, алгоритм \texttt{MEME}, обнаруживает один или несколько мотивов в наборе 
     последовательностей ДНК, РНК или белков, используя метод максимизации математического ожидания для подгонки 
@@ -346,14 +367,6 @@
     использованы в качестве байесовского оптимального классификатора для поиска вхождений мотива в других базах данных. 
     Алгоритм оценивает, сколько раз каждый мотив встречается в каждой последовательности в наборе данных, и выводит 
     частоту встречаемости этого мотива. \cite{meme}}
-    
-    \begin{figure}[]
-            \centering
-            \includegraphics[width=\textwidth]{img/meme.jpg}
-            \caption{Что умеет делать The MEME-Suite. Нам нужно находить новые мотивы в последовательностях - это 
-            указано сверху посередине. \cite{bailey}}
-            \label{fig:skybox}
-    \end{figure}
     
     
 \newpage
@@ -646,8 +659,63 @@ MEME Suite. Как и ожидалось, мы получили множеств
     \bibitem{phagesalm} J.P. Higgins, S.E. Higgins, K.L. Guenther, W. Huff, A.M. Donoghue, D.J. Donoghue, B.M. Hargis, 
     Use of a specific bacteriophage treatment to reduce Salmonella in poultry products12, Poultry Science, Volume 84, 
     Issue 7, 2005, Pages 1141-1145, ISSN 0032-5791, https://doi.org/10.1093/ps/84.7.1141
-
-
+    \bibitem{phagetrans} Bing Liu, Andrey Shadrin, Carol Sheppard, Vladimir Mekler, Yingqi Xu, Konstantin Severinov, 
+    Steve Matthews, Sivaramesh Wigneshweraraj, A bacteriophage transcription regulator inhibits bacterial transcription 
+    initiation by $\sigma$-factor displacement, Nucleic Acids Research, Volume 42, Issue 7, 1 April 2014, Pages 
+    4294–4305, 
+    https://doi.org/10.1093/nar/gku080 
+    \bibitem{17} Paget MS, Helmann JD: The sigma70 family of sigma factors. Genome Biol 2003, 4: 203. 
+    10.1186/gb-2003-4-1-203
+    \bibitem{18} Gruber TM, Gross CA: Multiple sigma subunits and the partitioning of bacterial transcription space. 
+    Annu Rev Microbiol 2003, 57: 441-466. 10.1146/annurev.micro.57.030502.090913
+    \bibitem{19}  Campbell EA, Westblade LF, Darst SA: Regulation of bacterial RNA polymerase sigma factor activity: a 
+    structural perspective. Curr Opin Microbiol 2008, 11: 121-127. 10.1016/j.mib.2008.02.016
+    \bibitem{20} Hook-Barnard IG, Hinton DM: Transcription Initiation by Mix and Match Elements: Flexibility for 
+    Polymerase Binding to Bacterial Promoters. Gene Regulation and Systems Biology 2007. 
+    http://la-press.com/article.php?article\_id=481:275-293
+    \bibitem{4} Miller ES, Kutter E, Mosig G, Arisaka F, Kunisawa T, Ruger W: Bacteriophage T4 genome. Microbiol Mol 
+    Biol Rev 2003, 67: 86-156. 10.1128/MMBR.67.1.86-156.2003
+    \bibitem{150} Estrem ST, Ross W, Gaal T, Chen ZW, Niu W, Ebright RH, Gourse RL: Bacterial promoter architecture: 
+    subsite structure of UP elements and interactions with the carboxy-terminal domain of the RNA polymerase alpha 
+    subunit. Genes Dev 1999, 13: 2134-2147. 10.1101/gad.13.16.2134
+    \bibitem{91} Stoskiene G, Truncaite L, Zajanckauskaite A, Nivinskas R: Middle promoters constitute the most abundant
+    and diverse class of promoters in bacteriophage T4. Mol Microbiol 2007, 64: 421-434. 
+    10.1111/j.1365-2958.2007.05659.x
+    \bibitem{5} Wilkens K, Ruger W: Transcription from early promoters. In Molecular Biology of Bacteriophage T4. Edited
+    by: Karam JD, Drake JW, Kreuzer KN, Mosig G, Hall DH, Eiserling FA, Black LW, Spicer EK, Kutter E, Carlson K, Miller
+    ES. Washington, D. C.: American Society for Microbiology; 1994:132-141.
+    \bibitem{39} Wilkens K, Ruger W: Characterization of bacteriophage T4 early promoters in vivo with a new promoter 
+    probe vector. Plasmid 1996, 35: 108-120. 10.1006/plas.1996.0013
+    \bibitem{2_} Flombaum P, Gallegos JL, Gordillo RA, Rincón, J, Zabala LL, Jiao N, et al. Present and future global 
+    distributions of the marine cyanobacteria Prochlorococcus and Synechococcus. Proc Natl Acad Sci USA. 2013;110: 
+    9824–9829.
+    \bibitem{3_} Zwirglmaier K, Jardillier L, Ostrowski M, Mazard S, Garczarek L, Vaulot D, et al. Global phylogeography
+    of marine Synechococcus and Prochlorococcus reveals a distinct partitioning of lineages among oceanic biomes.
+    Environ Microbiol. 2008;10:147–161.
+    \bibitem{4_} Bouman HA, Ulloa O, Scanlan DJ, Zwirglmaier K, Li WKW, Platt T, et al. Oceanographic basis of the 
+    global surface distribution of Prochlorococcus ecotypes. Science. 2006;312:918–921.
+    \bibitem{5_} Scanlan DJ, Ostrowski M, Mazard S, Dufresne A, Garczarek L, Hess WR, et al. Ecological genomics of 
+    marine picocyanobacteria. Microbiol Mol Biol Rev. 2009;73:249–299.
+    \bibitem{6_} Biller SJ, Berube PM, Lindell D, Chisholm SW. Prochlorococcus: the structure and function of collective
+    diversity. Nat Rev Microbiol. 2015;13:13–27.
+    \bibitem{7_} Lindell D, Jaffe JD, Johnson ZI, Church GM, Chisholm SW. Photosynthesis genes in marine viruses yield 
+    proteins during host infection. Nature. 2005;438:86–89.
+    \bibitem{8_} Mann NH, Cook A, Millard AD, Bailey S, Clokie M. Bacterial photosynthesis genes in a virus. Nature. 
+    2003;424:741–742.
+    \bibitem{9_} Puxty RJ, Millard AD, Evans DJ, Scanlan DJ. Viruses inhibit CO2 fixation in the most abundant 
+    phototrophs on Earth. Curr Biol. 2016;26:1585–1589.
+    \bibitem{18_} Garczarek L, Dufresne A, Blot N, Cockshutt AM, Peyrat A, Campbell DA, et al. Function and evolution of
+    the psbA gene family in marine Synechococcus: Synechococcus sp. WH7803 as a case study. ISME J. 2008;2:937–953.
+    \bibitem{23_} Mulo P, Sakurai I, Aro EM. Strategies for psbA gene expression in cyanobacteria, green algae and 
+    higher plants: From transcription to PSII repair. Biochim Biophys Acta Bioenerg. 2012;1817:247–257.
+    \bibitem{24_} Imamura S, Yoshihara S, Nakano S, Shiozaki N, Yamada A, Tanaka K, et al. Purification, 
+    characterization, and gene expression of all sigma factors of RNA polymerase in a cyanobacterium. J Mol Biol. 
+    2003;325:857–872.
+    \bibitem{25_} Imamura S, Asayama M, Shirai M. In vitro transcription analysis by reconstituted cyanobacterial RNA 
+    polymerase: roles of group 1 and 2 sigma factors and a core subunit, RpoC2. Genes Cells. 2004;9:1175–1187.
+    \bibitem{31_} Miller ES, Kutter E, Mosiq G, Arisaka F, Kunisawa T, Rüger W. Bacteriophage T4 genome. Microbiol Mol 
+    Biol Rev. 2003;67:86–156.
+    \bibitem{_1}   Altman, R, Brutlag, D, Karp, P, Lathrop, R, \& Searls, D. Proceedings: Second international conference on intelligent systems for molecular biology. United States. 
 \end{thebibliography}
 
 \end{document}
