@@ -288,15 +288,13 @@
         \item \subsection{GeneMarkS-2}
     \end{center}
     
-   
-    
     \par{Для поиска прокариотических генов существует несколько инструментов (например GeneMarkS, Glimmer3, Prodigal), 
     которые известны достаточно высокой точностью в предсказании белок-кодирующих ORF. В среднем эти инструменты 
     способны найти более 97\% генов в проверенном тестовом наборе с точки зрения правильного предсказания концов гена 3'
-    (Besemer et al. 2001; Delcher et al. 2007; Hyatt et al. 2010). Кроме того, точность определения стартов генов 
-    составляет в среднем 90\% (Hyatt et al., 2010). Но основная часть генов, которые не были обнаружены, принадлежали в 
+    \cite{besemer,delcher,hyatt}. Кроме того, точность определения стартов генов 
+    составляет в среднем 90\% \cite{hyatt}. Но основная часть генов, которые не были обнаружены, принадлежали в 
     основном к атипичной категории, т. е. гены с паттернами, не соответствующими видоспецифической натренированной 
-    модели, обученной на основной части генома (Бородовский и др., 1995). Тем не менее авторы описали метод, с помощью 
+    модели, обученной на основной части генома \cite{bordov1}. Тем не менее авторы описали метод, с помощью 
     которого можно получить более высокую точность в обнаружении генов. \cite{lomsad}}
     
     \begin{figure}[]
@@ -311,15 +309,14 @@
             \label{fig:skybox}
     \end{figure}
     
-    \par{GeneMarkS-2 использует довольно сложную модель гена (рис. 3). Большинство белок-кодирующих областей в 
-    прокариотических геномах имеют видоспецифичные паттерны из нескольких олигонуклеотидов (например, кодонов) (Fickett 
-    and Tung 1992). GeneMarkS-2 изучает эти паттерны и оценивает параметры типичной модели белок-кодирующих областей, 
-    трехпериодической цепи Маркова (Бородовский и др.,1986a, b), итеративно самообученаясь на всем геноме.}
+    \par{GeneMarkS-2 использует довольно сложную модель гена (рис. 4). Большинство белок-кодирующих областей в 
+    прокариотических геномах имеют видоспецифичные паттерны из нескольких олигонуклеотидов (например, кодонов) \cite{fickett}. GeneMarkS-2 изучает эти паттерны и оценивает параметры типичной модели белок-кодирующих областей, 
+    трехпериодической цепи Маркова \cite{bordov2}, итеративно самообученаясь на всем геноме.}
     
     
-    \par{Алгоритм обучения без учителя выполняет несколько двухэтапных итераций (рис. 4). Каждая итерация приводит к (1)
+    \par{Алгоритм обучения без учителя выполняет несколько двухэтапных итераций (рис. 5). Каждая итерация приводит к (1)
     сегментации генома на кодирующие белки (CDS) и некодирующие области (прогнозирование генов) и (2) переоценке 
-    параметров модели}
+    параметров модели.}
     
     \begin{figure}[]
             \centering
@@ -330,7 +327,7 @@
     
     
     \par{\textit{На первой итерации} Алгоритм Витерби вычисляет максимально вероятную 
-    последовательность скрытых состояний (рис. 1) вдоль генома. После первого запуска
+    последовательность скрытых состояний (рис. 4) вдоль генома. После первого запуска
     алгоритма Витерби все участки генома, помеченные как ``белок-кодирующие'', собираются в обучающий набор для оценки 
     параметров ``типичной'' (для данного генома) модели. Аналогично помеченные как ``некодирующие'' участки нужны для 
     оценки параметров модели некодирования, которая строется в виде однородной цепи Маркова второго порядка.}
@@ -721,7 +718,22 @@ MEME Suite. Как и ожидалось, мы получили множеств
     polymerase: roles of group 1 and 2 sigma factors and a core subunit, RpoC2. Genes Cells. 2004;9:1175–1187.
     \bibitem{31_} Miller ES, Kutter E, Mosiq G, Arisaka F, Kunisawa T, Rüger W. Bacteriophage T4 genome. Microbiol Mol 
     Biol Rev. 2003;67:86–156.
-    \bibitem{_1}   Altman, R, Brutlag, D, Karp, P, Lathrop, R, \& Searls, D. Proceedings: Second international conference on intelligent systems for molecular biology. United States. 
+    \bibitem{_1}   Altman, R, Brutlag, D, Karp, P, Lathrop, R, \& Searls, D. Proceedings: Second international 
+    conference on intelligent systems for molecular biology. United States. 
+    \bibitem{decemer}  Besemer J, Lomsadze A, Borodovsky M. 2001. GeneMarkS: a self-training method for prediction of 
+    gene starts in microbial genomes. Implications for finding sequence motifs in regulatory regions. Nucleic Acids Res 
+    29: 2607–2618.
+    \bibitem{belcher} Delcher AL, Bratke KA, Powers EC, Salzberg SL. 2007. Identifying bacterial genes and endosymbiont 
+    DNA with Glimmer. Bioinformatics 23: 673–679.
+    \bibitem{hyatt}  Hyatt D, Chen GL, Locascio PF, Land ML, Larimer FW, Hauser LJ. 2010. Prodigal: prokaryotic gene 
+    recognition and translation initiation site identification. BMC Bioinformatics 11: 119
+    \bibitem{bordov1}  Borodovsky M, McIninch JD, Koonin EV, Rudd KE, Medigue C, Danchin A. 1995. Detection of new genes
+    in a bacterial genome using Markov models for three gene classes. Nucleic Acids Res 23: 3554–3562.
+    \bibitem{fickett} Fickett JW, Tung CS. 1992. Assessment of protein coding measures. Nucleic Acids Res 20: 6441–6450
+    \bibitem{bordov2} Borodovsky M, Sprizhitskii Y, Golovanov E, Aleksandrov A. 1986b. Statistical patterns in primary 
+    structures of the functional regions of the genome of Escherichia coli. Computer recognition of coding regions. Mol 
+    Biol 20
+    
 \end{thebibliography}
 
 \end{document}
