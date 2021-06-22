@@ -280,7 +280,7 @@
     \par{Авторы обнаружили что скорость транскрипции фагов при сильном свете увеличивается, в то время, как репликации
     ДНК была такой же, как и при слабом. Также обнаружили, что скорость экспрессии только одного гена цианофага была
     пропорциональна интенсивности света. Это был фотосинтетический AMG psbA, кодирующий полипептид D1, расположенный в
-    ядре центра реакции PSII. Synechococcus также кодируют это белок, но у них не было никаких увеличений в скорости 
+    ядре центра реакции PSII. Synechococcus также кодируют этот белок, но у них не было никаких увеличений в скорости 
     транскрипции. \cite{puxty-evanx}}
     
     \par{Цианобактерии, включая морской Synechococcus, демонстрируют светозависимую транскрипцию psbAs \cite{18_,23_}. В
@@ -290,11 +290,11 @@
     транскрипцию psbA. Авторы не смогли найти консервативные мотивы в вышележащих областях в последовательностях psbA 
     S-PM2d, которые были бы общими с Synechococcus.} 
     
-    \par{Межгенную вышестоящая регуляторная последовательность у psbA нехарактерно длинная у S-PM2d(232 пар 
+    \par{Межгенная вышестоящая регуляторная последовательность у psbA нехарактерно длинная у S-PM2d (232 пар 
     нуклеотидов,по сравнению с медианой 6 по всему геному). Это также справедливо и для других цианофагов, где 
-    вышестоящие регуляторные области psbA варьируют в пределах 125-453 пн. Также с высокой степенью достоверности  было 
+    вышестоящие регуляторные области psbA варьируются в пределах 125-453 пн. Также с высокой степенью достоверности  было 
     обнаружено между рассмотренными фагами 6 общих мотивов в этих последовательностях \cite{puxty-evanx}. Из них два 
-    присутствовали в S-PM2d. Эти два мотива - это  -35 (мотив 6) и -10 (мотив 3) (на рисунке) элементы сайтов связывания
+    присутствовали в S-PM2d. Эти два мотива - это  -35 (мотив 6) и -10 (мотив 3) (рис. 3) элементы сайтов связывания
     фактора транскрипции $\sigma^{70}$, типичные для ранних генов Т4-подобных фагов \cite{31_}. К тому же, было 
     обнаружено, что как и у T4, мотив 3 содержит сайт для посадки позднего $\sigma$-фактора Gp55. Таким образом, у 
     S-PM2d имеются мотивы, необходимые для скоординированной экспрессии psbA на начальной и поздней стадиях инфекции.}
@@ -343,7 +343,7 @@
     
     
     \par{\textit{На первой итерации} алгоритм Витерби вычисляет максимально вероятную 
-    последовательность скрытых состояний (рис. 4) вдоль генома. После первого запуска
+    последовательность скрытых состояний (рис. 5) вдоль генома. После первого запуска
     алгоритма Витерби все участки генома, помеченные как ``белок-кодирующие'', собираются в обучающий набор для оценки 
     параметров ``типичной'' (для данного генома) модели. Аналогично помеченные как ``некодирующие'' участки нужны для 
     оценки параметров модели некодирования, которая строится в виде однородной цепи Маркова второго порядка.}
@@ -394,10 +394,10 @@
 \item \subsection{Программные средства}
 \end{center}
 \begin{itemize}
-    \item Virus-Host DB - База данных Virus-Host организует данные о взаимоотношениях между вирусами и их хостами,
+    \item Virus-Host DB - База данных в которой содержится информация о взаимоотношениях между вирусами и их хостами,
     представленные в виде пар идентификаторов таксономии NCBI для вирусов и их хостов. \cite{virus-host}
     
-    \item GeneMarkS-2 - программное обеспечение для поиска генов внутри геномов. \cite{lomsad}
+    \item GeneMarkS-2 - программное обеспечение для поиска генов в прокариотических геномах. \cite{lomsad}
     
     \item NCBI Entrez Programming Utilities - программное обеспечение, набор из восьми серверных программ, которые
     обеспечивают стабильный интерфейс с системой запросов и баз данных Entrez в Национальном центре биотехнологической
@@ -406,7 +406,7 @@
     \item Biopython - набор инструментов для биологических вычислений, написанных на Python. \cite{biopython}
     
     \item The MEME Suite - программное обеспечение для поиска новых, нераскрытых мотивов (повторяющихся паттернов
-    фиксированной длины) в последовательностях. МЕМ разбивает паттерны переменной длины на два или более отдельных
+    фиксированной длины) в последовательностях. МЕМE разбивает паттерны переменной длины на два или более отдельных
     мотива. \cite{bailey}
     
     \item Python 3.8.5 - среда для запуска скриптов формата *.py \cite{python}
@@ -414,7 +414,7 @@
     \item Jupyter Notebook - веб-приложение, которое позволяет создавать и обмениваться
     документами, содержащими живой код, уравнения, визуализации и повествовательный текст.\cite{jupyter}
     
-    \item \url{https://github.com/poolsar42/phages-and-hosts} - гитхаб репозиторий, в котором содержатся все нижележащие скрипты.
+    \item \url{https://github.com/poolsar42/phages-and-hosts} - GitHub репозиторий, в котором содержатся все нижележащие скрипты.
     \cite{github}
     
     \item \texttt{Fasta\_merge.ipynb} - скрипт для объединения регуляторных областей хозяина и его фагов в один файл.
@@ -425,11 +425,11 @@
     \item \texttt{VH\_tsv\_writer.ipynb} - скрипт, выписывающий в файл ID хоста и ID прилежащих к нему фагов.
     \item \texttt{Virus\_genes.ipynb} - скрипт для выгрузки геномов фагов.
     \item \texttt{missing\_phage\_genomes.ipynb} - скрипт для поиска фагов, для которых GMS2 не находит гены.
-    \item \texttt{proteins\_convertation.ipynb} - скрипт для преобразования \\ ДНК-последовательностей
+    \item \texttt{proteins\_convertation.ipynb} - скрипт для преобразования \\ нуклеотидных
                                 в белковые.
     \item \texttt{regex\_promoter.ipynb} - скрипт для анализа полученных результатов
     \item \texttt{run\_gms2.py} - скрипт для поиска генов в геномах с помощью GeneMarkS-2
-    \item \texttt{tsv\_write.ipynb} - скрипт для выписывания информации о связи между хостами и фагами в один файл
+    \item \texttt{tsv\_write.ipynb} - скрипт для выписывания информации о связи между хостами и фагами в один tsv-файл
 \end{itemize}
 
 \begin{center}
@@ -437,7 +437,7 @@
       \item  \subsubsection{Выгрузка геномов}
 \end{center}
     \begin{itemize}
-        \item С FTP сервера Virus-Hist DataBase выгрузили файл virushostdb.tsv - в нём содержится информация о связи 
+        \item С FTP сервера Virus-Hist DB выгрузили файл virushostdb.tsv - в нём содержится информация о связи 
         между фагами и их хостами.
         \item С помощью \texttt{tsv\_write.ipynb} - выписали в удобном формате все взаимоотношения между фагами и 
         хостами.
@@ -458,8 +458,8 @@
             \item И далее запустили \texttt{Hosts\_upstream\_regions.ipynb} для выделениях областей длиной 50 нуклеотидов
             перед точкой начала транскрипции у каждого найденным геном
         \end{itemize}
-    \par{Гены мы находили с помощью Gene-Marks 2. Gene-Marks 2 также дал позицию каждого гена в геноме. Каждому гену 
-    посчитали его транслирующийся белок, также с помощью Gene-Marks 2. После этого для каждого гена нашли вышестоящие 
+    \par{Гены мы находили с помощью GeneMarkS-2. GeneMarkS-2 также дал позицию каждого гена в геноме. Каждому гену 
+    посчитали его транслирующийся белок, также с помощью GeneMarkS-2. После этого для каждого гена нашли вышестоящие 
     регуляторные области, длиной в 50 нуклеотидов. Это наша оценка расстояния, на котором должны быть общие мотивы, 
     кроме -35 и -10 элементов.}
     \begin{center}
@@ -509,9 +509,8 @@
     \subsection{Анализ полученных результатов}
     \end{center}
     
-    \par{Для каждого мотива мы нашли где конкретно он находится и добавили в таблицу результатов
-    отдельную колонку ``location''. В этой колонке присутствуют значения BOTH - если мотив был найден и у бактерии и у
-    фага, либо ``PHAGE'', если мотив был найден только и фага или ``HOST'', если мотив был найден только у бактерии. К
+    \par{Для каждого мотива мы нашли его локализацию и добавили в таблицу результатов
+    отдельную колонку ``location''. В этой колонке присутствуют значения ``BOTH`` - если мотив был найден и у бактерии и у фага, ``PHAGE'' - если мотив был найден только и фага или ``HOST'', если мотив был найден только у бактерии. К
     нашему удивлению некоторые мотивы не были найдены нигде - для таких мы в этой колонке выписали ``NOT FOUND''.}
     
      \begin{figure}[h]
@@ -526,14 +525,12 @@
     были найдены в 53 исходных файлах. 858 мотивов было найдено внутри самих бактериальных промоторных областях, но они 
     не были найдены у фагов, поражающих эти бактерии. Они были найдены в 329 исходных файлах. И, наконец, 727 мотивов 
     были общими для бактерий и некоторых фагов, которые их поражают, они были найдены в 195 исходных файлах.  Оставшиеся
-    270 найденных мотивов обладают мистическим свойством - они не были найдены ни в каких промоторных областях в своих 
-    файлах.}
+    270 найденных мотивов не были найдены ни в каких промоторных областях в своих файлах.}
 
 \par{Также, мы знаем, что у бактерии и у хоста могут часто повторяются -35 и -10 промоторные элементы. Нам они не
     были интересны. Мы нашли возможные последовательности для -35 и для -10 участков \cite{-35,-35-10,-35-10wiki} и 
-    удалили их из нашего датасета с помощью регулярных выражений \cite{re}. В оставшейся таблице было 1344 мотива из 362
-    исходных файлов. Из 
-    них:} 
+    удалили их из нашего набора данных с помощью регулярных выражений \cite{re}. В оставшейся таблице было 1344 мотива 
+    из 362 исходных файлов. Из них:} 
     
     \begin{itemize}
         \item 63 мотива были общими только среди фагов в 39 файлах.
@@ -545,37 +542,40 @@
     \begin{figure}[h]
         \centering
         \includegraphics[width=\textwidth]{img/plot_.png}
-        \caption{Результат поиска мотивов по файлам после удаления -35 и -10 элементов. В процентном соотношении от 1344 мотивов.}
+        \caption{Результат поиска мотивов по файлам после удаления -35 и -10 элементов. В процентном соотношении от 1344
+        мотивов.}
         \label{fig:skybox}
     \end{figure}
     
     
     \par{Нам было интересно положение мотивов относительно начала транскрипции. Как уже было сказано, мы выделили 50 
-    нуклеотидов - перед стартом транскрипции. Опять же, с помощью регулярных выражений, мы нашли положения мотивов в
+    нуклеотидов - перед стартом транскрипции. Опять же, с помощью регулярных выражений, мы нашли положение мотива в
     каждом 50-нуклеотидном регионе, в котором он встречается. Для каждого мотива мы посчитали среднее значение для его
     левого конца относительно начала транскрипции, для его правого конца и среднеквадратичную ошибку для обоих
-    концов. Всё это зафиксировали в таблице результатов. Эта таблица получилось слишком большой, даже чтобы включать её в приложение. Она доступна по ссылке:
+    концов. Всё это зафиксировали в таблице результатов. Таблица получилась большой, чтобы включать её 
+    в приложение. Она доступна по ссылке:
     \url{https://raw.githubusercontent.com/poolsar42/BachelorThesis/main/results.tsv}}
 
     \begin{figure}[h]
         \centering
         \includegraphics[width=\textwidth]{img/_plot_.png}
-        \caption{Усреднённые для каждого мотива позиции его начала(зелёная гистограмма) и конца(красная) относительно точки старта транскрипции.}
+        \caption{Усреднённые для каждого мотива позиции его начала(зелёная гистограмма) и конца(красная) относительно 
+        точки старта транскрипции.}
         \label{fig:skybox}
     \end{figure}
     
     \par{Также, как я уже написал выше, мы удивились, когда обнаружили, что некоторые мотивы не были найдены ни в каком 
     из представленных вышестоящих регуляторных регионах. Также во многих мотивах 
-    можно заметить большое количество букв W, N, Y и ещё некоторых, которые не входят в состав привычных нам A,T,G и C 
+    можно заметить большое количество букв W, N, Y и ещё некоторых, которые не входят в состав привычных нам A, T, G и C
     для нуклеотидов. Дело в том, что на одном месте в мотиве в разных последовательностях могут стоять разные 
     нуклеотиды. И для таких двойственных мест MEME-Suite использует специальный алфавит, в котором одна буква заменяет 
-    все возможные основания на данной позиции \cite{memealphabet}. }
+    все возможные на данной позиции \cite{memealphabet}. }
     
     \par{Но когда мы начали анализировать эти последовательности, мы заметили, что некоторые регулярные выражения и 
     двойственные буквы, которые должны им соответствовать, не совпадают с теми, которые даны в алфавите 
     \cite{memealphabet}.}
     
-    \par{ Минимальная ширина искомых мотивов была 10 нуклеотидов. Ширина нескольких известных 
+    \par{ В нашем поиске мотивов минимальная ширина искомых мотивов была 10 нуклеотидов. Ширина нескольких известных 
     мотивов (-35, -10 etc.) колеблется в районе от 6 до 10 нуклеотидов. К тому же, межгенного расстояния в 
     50 нуклеотидов не всегда достаточно для поиска общих мотивов. Точка начала транскрипции также не всегда находилась верно. Учитывая это, в 42\% случаях общие мотивы между фагами
     их хозяевами были найдены. В 54\% случаях общие мотивы были обнаружены только между фагами. Мы считаем эти первичные
@@ -593,10 +593,8 @@
     для предварительного подсчёта такой корреляции \texttt{preliminary\_correlation.py}, используя трюки отсюда 
     \cite{stackoverflow}. Для каждого файла с мотивами была посчитана такого рода корреляция. На данном этапе 
     результаты трудно интерпретировать. Прикладываю в качестве примера корреляционную матрицу для мотивов из 
-    одного файла. Первый аргумент в каждой позиции этой матрицы - подсчитанный коэффициент корреляции Пирсона. Можно 
-    лишь заметить, что везде наблюдается положительная корреляция, где-то в большей степени, а где-то в меньшей. Это 
-    указывает на то, что действительно между мотивами фагов, атакующих одну бактерию есть что-то общее. Таблица доступна
-    по ссылке: \url{https://github.com/poolsar42/BachelorThesis/blob/main/MEME_0_1115_motif.tsv}}
+    одного файла. Первый аргумент в каждой позиции этой матрицы - подсчитанный коэффициент корреляции Пирсона. Таблица
+    доступна по ссылке: \url{https://github.com/poolsar42/BachelorThesis/blob/main/MEME_0_1115_motif.tsv}}
     
     \newpage
     \begin{center}
@@ -616,11 +614,13 @@
     \bibitem{hinton} Hinton D.M. Transcriptional control in the prereplicative phase of T4 development // Virology
     journal. 2010. V. 7. P. 289. \url{https://doi.org/10.1186/1743-422X-7-289}
     \bibitem{puxty-evanx} Puxty, R.J., Evans, D.J., Millard, A.D. et al. Energy limitation of cyanophage development:
-    implications for marine carbon cycling // ISME J. 2018, 12, 1273–1286. \url{https://doi.org/10.1038/s41396-017-0043-3}
+    implications for marine carbon cycling // ISME J. 2018, 12, 1273–1286. 
+    \url{https://doi.org/10.1038/s41396-017-0043-3}
     \bibitem{lomsad} Lomsadze, A., Gemayel, K., Tang, S., and Borodovsky, M. Modeling leaderless transcription and
     atypical genes results in more accurate gene prediction in prokaryotes Genome research,  2018. 28(7), 1079–1089.
     \url{https://doi.org/10.1101/gr.230615.117}
-    \bibitem{bailey} Timothy L. Bailey, James Johnson, Charles E. Grant, William S. Noble, The MEME Suite, Nucleic Acids Research, Volume 43, Issue W1, 1 July 2015, Pages W39–W49,  \url{https://doi.org/10.1093/nar/gkv416}
+    \bibitem{bailey} Timothy L. Bailey, James Johnson, Charles E. Grant, William S. Noble, The MEME Suite, Nucleic Acids
+    Research, Volume 43, Issue W1, 1 July 2015, Pages W39–W49,  \url{https://doi.org/10.1093/nar/gkv416}
     \bibitem{memeres} \url{https://kodomo.fbb.msu.ru/~partyhard/term4/pr9/meme_out_oops/meme.html#pssm1}
     \bibitem{-35} \url{https://www.addgene.org/mol-bio-reference/promoters/}
     \bibitem{-35-10} Chang-Hui Shen // Gene Expression: Transcription of the Genetic Code // Diagnostic Molecular 
@@ -629,20 +629,25 @@
     \bibitem{re} \url{https://docs.python.org/3/library/re.html#module-re}
     \bibitem{memealphabet} \url{https://meme-suite.org/meme/doc/alphabet-format.html#standard_DNA}
     \bibitem{stackoverflow} \url{https://stackoverflow.com/questions/30143417/computing-the-correlation-coefficient-between-two-multi-dimensional-arrays}
-    \bibitem{meme} Bailey TL, Elkan C. Fitting a mixture model by expectation maximization to discover motifs in biopolymers. Proc Int Conf Intell Syst Mol Biol. 1994;2:28-36. PMID: 7584402.
+    \bibitem{meme} Bailey TL, Elkan C. Fitting a mixture model by expectation maximization to discover motifs in 
+    biopolymers. Proc Int Conf Intell Syst Mol Biol. 1994;2:28-36. PMID: 7584402.
     \bibitem{phagewikieng} \url{https://en.wikipedia.org/wiki/Bacteriophage}
     \bibitem{phageapps} Monk, A., Rees, C., Barrow, P., Hagens, S. and Harper, D. (2010), Bacteriophage applications: 
-    where are we now? Letters in Applied Microbiology, 51: 363-369. \url{https://doi.org/10.1111/j.1472-765X.2010.02916.x}
+    where are we now? Letters in Applied Microbiology, 51: 363-369. 
+    \url{https://doi.org/10.1111/j.1472-765X.2010.02916.x}
     \bibitem{phagetreat} David R. Harper, Benjamin H Burrowes, Elizabeth M. Kutter (15 August 2014) Bacteriophage: 
     Therapeutic Uses, Letters in Applied Microbiology.  \url{https://doi.org/10.1002/9780470015902.a0020000.pub2}
     \bibitem{advdisphage} \url{https://sitn.hms.harvard.edu/flash/2018/bacteriophage-solution-antibiotics-problem/}
-    \bibitem{17} Paget, M.S., Helmann, J.D. The $ sigma^70 $ family of sigma factors. Genome Biol 4, 203 (2003). \url{https://doi.org/10.1186/gb-2003-4-1-203}
+    \bibitem{17} Paget, M.S., Helmann, J.D. The $ sigma^70 $ family of sigma factors. Genome Biol 4, 203 (2003). 
+    \url{https://doi.org/10.1186/gb-2003-4-1-203}
     \bibitem{20} Hook-Barnard IG, Hinton DM: Transcription Initiation by Mix and Match Elements: Flexibility for 
     Polymerase Binding to Bacterial Promoters. Gene Regulation and Systems Biology 2007. 
     \url{http://la-press.com/article.php?article\_id=481:275-293}
     \bibitem{4} Miller ES, Kutter E, Mosig G, Arisaka F, Kunisawa T, Ruger W: Bacteriophage T4 genome. Microbiol Mol 
     Biol Rev 2003, 67: 86-156. \url{https://doi.org/10.1128/MMBR.67.1.86-156.2003}
-    \bibitem{91} Stoškiene, G., Truncaite, L., Zajančkauskaite, A. and Nivinskas, R. (2007), Middle promoters constitute the most abundant and diverse class of promoters in bacteriophage T4. Molecular Microbiology, 64: 421-434. \url{https://doi.org/10.1111/j.1365-2958.2007.05659.x}
+    \bibitem{91} Stoškiene, G., Truncaite, L., Zajančkauskaite, A. and Nivinskas, R. (2007), Middle promoters constitute
+    the most abundant and diverse class of promoters in bacteriophage T4. Molecular Microbiology, 64: 421-434. 
+    \url{https://doi.org/10.1111/j.1365-2958.2007.05659.x}
     \bibitem{39} Wilkens K, Ruger W: Characterization of bacteriophage T4 early promoters in vivo with a new promoter 
     probe vector. Plasmid 1996, 35: 108-120. \url{https://doi.org/10.1006/plas.1996.0013}
     \bibitem{3_} Zwirglmaier K, Jardillier L, Ostrowski M, Mazard S, Garczarek L, Vaulot D, et al. Global phylogeography
