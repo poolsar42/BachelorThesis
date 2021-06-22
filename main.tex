@@ -1,12 +1,23 @@
 %\documentclass[a4paper,12pt]{article}
-\documentclass[14pt]{extarticle}
+\documentclass[a4paper, 14pt]{extarticle}
 \usepackage{cmap}		
 \usepackage[utf8]{inputenc}			
 \usepackage[english,russian]{babel}
+
+% \usepackage{fontspec}
+
+% \usepackage{polyglossia}
+% \setdefaultlanguage{russian}
+% \setotherlanguages{english}
+% \setmainfont{Garamond Premier Pro}
+
+% \usepackage[default]{droidserif}
+% \usepackage[defaultsans]{droidsans}
+
 \usepackage{framed}
 \usepackage{hyperref}
 \usepackage{xurl} % Чтоб url длинные помещались в текст
-\usepackage{amsmath}
+%\usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{wrapfig}
@@ -98,10 +109,11 @@
     \item \subsection{Бактериофаги}
     \end{center}
     
-    \begin{figure}[h]
+    \begin{figure}[ht]
         \centering
             \includegraphics[width=\textwidth]{img/average_phage.jpg}
-        \caption{Жизненный цикл среднестатистического фага. (1) Фаг сначала приземляется на бактерию. (2) Затем он 
+        \caption{\textit{Жизненный цикл среднестатистического фага.} (1) Фаг сначала приземляется на бактерию. (2) Затем
+        он 
         вводит свою ДНК внутрь бактерий. (3) ДНК копируется и используется для изготовления капсидов для новых фагов. 
         (4) Новые фаги собираются и взрывают бактерию, убивая её в процессе. \cite{advdisphage}}
         \label{fig:skybox}
@@ -321,7 +333,8 @@
     \begin{figure}[]
             \centering
             \includegraphics[width=\textwidth]{img/gms2_1.jpg}
-            \caption{Диаграмма основного состояния обобщенной скрытой марковской модели (GHHM) геномной 
+            \caption{\textit{Модель гена в GeneMarkS-2.} Диаграмма основного состояния обобщенной скрытой марковской 
+            модели (GHHM) геномной 
             последовательности прокариот. Состояния, показанные на верхней панели, использовались для моделирования гена
             в прямом направлении. Гены в обратном направлении моделировались идентичным набором состояний (с обратными 
             направлениями перехода). Различные состояния, моделирующие гены в прямых и обратных цепочках, были связаны 
@@ -343,7 +356,7 @@
     \begin{figure}[]
             \centering
             \includegraphics[width=\textwidth]{img/gms2_2.jpg}
-            \caption{Диаграма обучения без учителя для GMS-2 \cite{lomsad}}
+            \caption{\textit{Диаграма обучения без учителя для GMS-2} \cite{lomsad}}
             \label{fig:skybox}
     \end{figure}
     
@@ -378,7 +391,7 @@
     \begin{figure}[]
         \centering
         \includegraphics[width=\textwidth]{img/meme.jpg}
-        \caption{Что умеет делать The MEME-Suite. Нам нужно находить новые мотивы в последовательностях - это 
+        \caption{\textit{Что умеет делать The MEME-Suite.} Нам нужно находить новые мотивы в последовательностях - это 
         указано сверху посередине. \cite{bailey}}
         \label{fig:skybox}
     \end{figure}
@@ -523,7 +536,8 @@
      \begin{figure}[h]
         \centering
         \includegraphics[width=\textwidth]{img/plot.png}
-        \caption{Результат поиска мотивов по файлам без удаления -35 и -10 элементов. В процентном соотношении от 1946 
+        \caption{\textit{Результат поиска мотивов по файлам без удаления -35 и -10 элементов.} В процентном соотношении 
+        от 1946 
         мотивов.}
         \label{fig:skybox}
     \end{figure}
@@ -549,7 +563,8 @@
     \begin{figure}[h]
         \centering
         \includegraphics[width=\textwidth]{img/plot_.png}
-        \caption{Результат поиска мотивов по файлам после удаления -35 и -10 элементов. В процентном соотношении от 1344
+        \caption{\textit{Результат поиска мотивов по файлам после удаления -35 и -10 элементов.} В процентном 
+        соотношении от 1344
         мотивов.}
         \label{fig:skybox}
     \end{figure}
@@ -566,8 +581,9 @@
     \begin{figure}[h]
         \centering
         \includegraphics[width=\textwidth]{img/_plot_.png}
-        \caption{Усреднённые для каждого мотива позиции его начала(зелёная гистограмма) и конца(красная) относительно 
-        точки старта транскрипции.}
+        \caption{\textit{Усреднённые для каждого мотива позиции его начала(зелёная гистограмма) и конца(красная) 
+        относительно 
+        точки старта транскрипции.}}
         \label{fig:skybox}
     \end{figure}
     
@@ -596,13 +612,13 @@
 
     \par{Нам также стало интересно, коррелируют ли как-то между собой мотивы бактериофагов, которые атакуют одну 
     бактерию, а также есть ли корреляция между мотивами бакториофагов из одной таксономической категории. Для начала мы 
-    хотели посчитать корреляцию Пирсона между PFM этих мотивов. Но PFM - двумерный массив, мы не обнаружили в известных 
+    хотели посчитать корреляцию Пирсона между PFM этих мотивов. Но PFM - двумерный массив; мы не обнаружили в известных 
     библиотеках Python подходящей функции для подсчётка корреляции между 2D-массивами. Мы позаимствовали скрипт 
     для предварительного подсчёта такой корреляции \texttt{preliminary\_correlation.py}, используя трюки отсюда 
-    \cite{stackoverflow}. Для каждого файла с мотивами была посчитана такого рода корреляция. На данном этапе 
-    результаты трудно интерпретировать. Прикладываю в качестве примера корреляционную матрицу для мотивов из 
-    одного файла. Первый аргумент в каждой позиции этой матрицы - подсчитанный коэффициент корреляции Пирсона. Таблица
-    доступна по ссылке: \url{https://github.com/poolsar42/BachelorThesis/blob/main/MEME_0_1115_motif.tsv}}
+    \cite{stackoverflow}. Для каждого файла с мотивами была посчитана корреляция. Пример найденной корреляции можно 
+    найти по ссылке: \url{https://github.com/poolsar42/BachelorThesis/blob/main/MEME_0_1115_motif.tsv}. Первый аргумент 
+    в каждой позиции этой матрицы - подсчитанный коэффициент корреляции Пирсона. На данном этапе 
+    результаты трудно интерпретировать. }
     
     \newpage
     \begin{center}
